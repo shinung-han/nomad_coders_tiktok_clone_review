@@ -40,7 +40,7 @@ dev_dependencies:
 - [x] 4.0 Sign Up Screen (16:49)
 - [x] 4.1 Login Screen (16:12)
 - [x] 4.2 AuthButton (12:00)
-- [ ] 4.3 Sign Up Form (16:51)
+- [x] 4.3 Sign Up Form (16:51)
 - [ ] 4.4 Username Screen (13:27)
 - [ ] 4.5 FormButton (15:20)
 - [ ] 4.6 Email Screen (10:19)
