@@ -5,6 +5,15 @@
 - Nomad Coders Tiktok Clone Coding Review
 - 23.5.31(수) -
 
+## Packages
+
+```
+dependencies:
+    font_awesome_flutter : ^10.3.0
+
+dev_dependencies:
+```
+
 ## Scrollable Widgets
 
 - [x] SingleChildScrollView 뽀개버리기
