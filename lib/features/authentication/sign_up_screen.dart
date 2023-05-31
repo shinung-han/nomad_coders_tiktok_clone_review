@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone_2/constants/gaps.dart';
 import 'package:tiktok_clone_2/constants/sizes.dart';
-import 'package:tiktok_clone_2/features/authentication/email_screen.dart';
 import 'package:tiktok_clone_2/features/authentication/login_screen.dart';
+import 'package:tiktok_clone_2/features/authentication/username_screen.dart';
 import 'package:tiktok_clone_2/features/authentication/widgets/auth_button.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -21,7 +21,7 @@ class SignUpScreen extends StatelessWidget {
   void _onEmailTap(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (_) => const EmailScreen(),
+        builder: (_) => const UsernameScreen(),
       ),
     );
   }
