@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone_2/constants/gaps.dart';
 import 'package:tiktok_clone_2/constants/sizes.dart';
+import 'package:tiktok_clone_2/features/authentication/login_form_screen.dart';
 import 'package:tiktok_clone_2/features/authentication/widgets/auth_button.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -11,16 +12,24 @@ class LoginScreen extends StatelessWidget {
     Navigator.of(context).pop();
   }
 
+  void _onEmailLoginTap(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => const LoginFormScreen(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const SafeArea(
+      body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: Sizes.size40),
+          padding: const EdgeInsets.symmetric(horizontal: Sizes.size40),
           child: Column(
             children: [
               Gaps.v80,
-              Text(
+              const Text(
                 'Log in for TikTok',
                 style: TextStyle(
                   fontSize: Sizes.size24,
@@ -28,7 +37,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               Gaps.v20,
-              Text(
+              const Text(
                 'Manage your account, check notifications, comment on videos, and more.',
                 style: TextStyle(
                   fontSize: Sizes.size16,
@@ -38,10 +47,12 @@ class LoginScreen extends StatelessWidget {
               ),
               Gaps.v40,
               AuthButton(
-                  icon: FaIcon(FontAwesomeIcons.user),
-                  text: 'Use email & password'),
+                icon: const FaIcon(FontAwesomeIcons.user),
+                text: 'Use email & password',
+                onTap: () => _onEmailLoginTap(context),
+              ),
               Gaps.v16,
-              AuthButton(
+              const AuthButton(
                   icon: FaIcon(FontAwesomeIcons.apple),
                   text: 'Continue with Apple'),
             ],
