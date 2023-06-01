@@ -14,10 +14,6 @@ dependencies:
 dev_dependencies:
 ```
 
-## Scrollable Widgets
-
-- [x] SingleChildScrollView 뽀개버리기
-
 ### 1 ❤️ THANK YOU
 
 - [x] 1.0 🚨 Read this First 🚨
@@ -43,7 +39,7 @@ dev_dependencies:
 - [x] 4.3 Sign Up Form (16:51)
 - [x] 4.4 Username Screen (13:27)
 - [x] 4.5 FormButton (15:20)
-- [ ] 4.6 Email Screen (10:19)
+- [x] 4.6 Email Screen (10:19)
 - [ ] 4.7 Password Screen (16:22)
 - [ ] 4.8 Birthday Screen (13:49)
 - [ ] 4.9 Login Form (18:08)
