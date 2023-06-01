@@ -43,12 +43,12 @@ dev_dependencies:
 - [x] 4.7 Password Screen (16:22)
 - [x] 4.8 Birthday Screen (13:49)
 - [x] 4.9 Login Form (18:08)
-- [ ] 4.10 Conclusions (04:43)
+- [x] 4.10 Conclusions (04:43)
 
 ### 5 ONBOARDING
 
-- [ ] 5.0 Introduction (02:35)
-- [ ] 5.1 Interests Screen (17:15)
+- [x] 5.0 Introduction (02:35)
+- [x] 5.1 Interests Screen (17:15)
 - [ ] 5.2 Scroll Animations (12:27)
 - [ ] 5.3 Tutorial Screen (11:07)
 - [ ] 5.4 AnimatedCrossFade (18:30)
