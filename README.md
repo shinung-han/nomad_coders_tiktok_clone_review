@@ -50,7 +50,7 @@ dev_dependencies:
 - [x] 5.0 Introduction (02:35)
 - [x] 5.1 Interests Screen (17:15)
 - [x] 5.2 Scroll Animations (12:27)
-- [ ] 5.3 Tutorial Screen (11:07)
+- [x] 5.3 Tutorial Screen (11:07)
 - [ ] 5.4 AnimatedCrossFade (18:30)
 
 ### 6 TAB NAVIGATION
