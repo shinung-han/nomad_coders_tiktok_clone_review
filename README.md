@@ -63,7 +63,7 @@ dev_dependencies:
 - [x] 6.5 Custom NavigationBar (11:26)
 - [x] 6.6 Stateful Navigation part One (11:52)
 - [x] 6.7 Stateful Navigation part Two (07:51)
-- [ ] 6.8 Post Video Button (16:15)
+- [x] 6.8 Post Video Button (16:15)
 
 ### 7 VIDEO TIMELINE
 
