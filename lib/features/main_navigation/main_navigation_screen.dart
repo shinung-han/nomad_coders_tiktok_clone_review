@@ -18,16 +18,14 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       child: Text('Home'),
     ),
     const Center(
-      child: Text('Search'),
+      child: Text('Discover'),
+    ),
+    Container(),
+    const Center(
+      child: Text('Inbox'),
     ),
     const Center(
-      child: Text('Home'),
-    ),
-    const Center(
-      child: Text('Search'),
-    ),
-    const Center(
-      child: Text('Home'),
+      child: Text('Profile'),
     ),
   ];
 
@@ -40,6 +38,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: screens.elementAt(_selectIndex),
       bottomNavigationBar: BottomAppBar(
         color: Colors.black,
         child: Padding(
@@ -51,24 +50,28 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                 text: 'Home',
                 isSelected: _selectIndex == 0,
                 icon: FontAwesomeIcons.house,
+                selectedIcon: FontAwesomeIcons.house,
                 onTap: () => _onTap(0),
               ),
               NavTab(
                 text: 'Discover',
                 isSelected: _selectIndex == 1,
-                icon: FontAwesomeIcons.magnifyingGlass,
+                icon: FontAwesomeIcons.compass,
+                selectedIcon: FontAwesomeIcons.solidCompass,
                 onTap: () => _onTap(1),
               ),
               NavTab(
                 text: 'Inbox',
                 isSelected: _selectIndex == 3,
                 icon: FontAwesomeIcons.message,
+                selectedIcon: FontAwesomeIcons.solidMessage,
                 onTap: () => _onTap(3),
               ),
               NavTab(
                 text: 'Profile',
                 isSelected: _selectIndex == 4,
                 icon: FontAwesomeIcons.user,
+                selectedIcon: FontAwesomeIcons.solidUser,
                 onTap: () => _onTap(4),
               ),
             ],
