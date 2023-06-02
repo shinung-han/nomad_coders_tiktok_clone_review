@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tiktok_clone_2/constants/sizes.dart';
+import 'package:tiktok_clone_2/features/main_navigation/widgets/nav_tab.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});
@@ -38,44 +40,40 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[_selectIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        mouseCursor: MouseCursor.defer,
-        currentIndex: _selectIndex,
-        onTap: _onTap,
-        selectedItemColor: Theme.of(context).primaryColor,
-        items: const [
-          BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.house),
-            label: "Home",
-            tooltip: 'What are you?',
-            backgroundColor: Colors.amber,
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.black,
+        child: Padding(
+          padding: const EdgeInsets.all(Sizes.size12),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              NavTab(
+                text: 'Home',
+                isSelected: _selectIndex == 0,
+                icon: FontAwesomeIcons.house,
+                onTap: () => _onTap(0),
+              ),
+              NavTab(
+                text: 'Discover',
+                isSelected: _selectIndex == 1,
+                icon: FontAwesomeIcons.magnifyingGlass,
+                onTap: () => _onTap(1),
+              ),
+              NavTab(
+                text: 'Inbox',
+                isSelected: _selectIndex == 3,
+                icon: FontAwesomeIcons.message,
+                onTap: () => _onTap(3),
+              ),
+              NavTab(
+                text: 'Profile',
+                isSelected: _selectIndex == 4,
+                icon: FontAwesomeIcons.user,
+                onTap: () => _onTap(4),
+              ),
+            ],
           ),
-          BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.magnifyingGlass),
-            label: "Search",
-            tooltip: 'What are you?',
-            backgroundColor: Colors.blue,
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.house),
-            label: "Home",
-            tooltip: 'What are you?',
-            backgroundColor: Colors.pink,
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.magnifyingGlass),
-            label: "Search",
-            tooltip: 'What are you?',
-            backgroundColor: Colors.red,
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.house),
-            label: "Home",
-            tooltip: 'What are you?',
-            backgroundColor: Colors.teal,
-          ),
-        ],
+        ),
       ),
     );
   }
