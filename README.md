@@ -55,9 +55,9 @@ dev_dependencies:
 
 ### 6 TAB NAVIGATION
 
-- [ ] 6.0 Introduction (02:11)
-- [ ] 6.1 pushAndRemoveUntil (10:53)
-- [ ] 6.2 BottomNavigationBar (13:25)
+- [x] 6.0 Introduction (02:11)
+- [x] 6.1 pushAndRemoveUntil (10:53)
+- [x] 6.2 BottomNavigationBar (13:25)
 - [ ] 6.3 NavigationBar (08:11)
 - [ ] 6.4 CupertinoTabBar (04:04)
 - [ ] 6.5 Custom NavigationBar (11:26)
