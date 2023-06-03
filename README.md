@@ -92,7 +92,7 @@ dev_dependencies:
 
 - [x] 8.0 showModalBottomSheet (14:14)
   - showModalBottomSheet
-- [ ] 8.1 Comments (08:35)
+- [x] 8.1 Comments (08:35)
 - [ ] 8.2 Add Comment (14:35)
 - [ ] 8.3 Text Input Actions (10:56)
 - [ ] 8.4 Conclusions (02:26)
