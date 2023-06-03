@@ -82,7 +82,8 @@ dev_dependencies:
   - Transform.scale
 - [x] 7.6 AnimatedBuilder (06:33)
   - AnimatedBuilder
-- [ ] 7.7 SingleTickerProviderStateMixin (06:37)
+- [x] 7.7 SingleTickerProviderStateMixin (06:37)
+  - CircleAvatar
 - [ ] 7.8 Video UI (13:59)
 - [ ] 7.9 RefreshIndicator (05:20)
 
