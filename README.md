@@ -73,8 +73,13 @@ dev_dependencies:
 - [x] 7.1 Infinite Scrolling (13:45)
 - [x] 7.2 PageController (07:02)
 - [x] 7.3 Video Player (14:09)
+  - Positioned.fill
 - [x] 7.4 VisibilityDetector (10:00)
-- [ ] 7.5 AnimationController (13:20)
+  - VisibilityDetector (dependency)
+  - IgnorePointer
+- [x] 7.5 AnimationController (13:20)
+  - AnimationController
+  - Transform.scale
 - [ ] 7.6 AnimatedBuilder (06:33)
 - [ ] 7.7 SingleTickerProviderStateMixin (06:37)
 - [ ] 7.8 Video UI (13:59)
