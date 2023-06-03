@@ -9,7 +9,9 @@
 
 ```
 dependencies:
-    font_awesome_flutter : ^10.3.0
+    font_awesome_flutter: 10.3.0
+    video_player: 2.4.10
+    visibility_detector: 0.3.3
 
 dev_dependencies:
 ```
@@ -67,11 +69,11 @@ dev_dependencies:
 
 ### 7 VIDEO TIMELINE
 
-- [ ] 7.0 Introduction (02:06)
-- [ ] 7.1 Infinite Scrolling (13:45)
-- [ ] 7.2 PageController (07:02)
-- [ ] 7.3 Video Player (14:09)
-- [ ] 7.4 VisibilityDetector (10:00)
+- [x] 7.0 Introduction (02:06)
+- [x] 7.1 Infinite Scrolling (13:45)
+- [x] 7.2 PageController (07:02)
+- [x] 7.3 Video Player (14:09)
+- [x] 7.4 VisibilityDetector (10:00)
 - [ ] 7.5 AnimationController (13:20)
 - [ ] 7.6 AnimatedBuilder (06:33)
 - [ ] 7.7 SingleTickerProviderStateMixin (06:37)
