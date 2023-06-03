@@ -80,7 +80,8 @@ dev_dependencies:
 - [x] 7.5 AnimationController (13:20)
   - AnimationController
   - Transform.scale
-- [ ] 7.6 AnimatedBuilder (06:33)
+- [x] 7.6 AnimatedBuilder (06:33)
+  - AnimatedBuilder
 - [ ] 7.7 SingleTickerProviderStateMixin (06:37)
 - [ ] 7.8 Video UI (13:59)
 - [ ] 7.9 RefreshIndicator (05:20)
