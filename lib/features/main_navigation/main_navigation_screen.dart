@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone_2/constants/gaps.dart';
 import 'package:tiktok_clone_2/constants/sizes.dart';
 import 'package:tiktok_clone_2/features/discover/discover_screen.dart';
+import 'package:tiktok_clone_2/features/inbox/inbox_screen.dart';
 import 'package:tiktok_clone_2/features/main_navigation/widgets/nav_tab.dart';
 import 'package:tiktok_clone_2/features/onboarding/widgets/post_video_button.dart';
 import 'package:tiktok_clone_2/features/videos/video_timeline_screen.dart';
@@ -15,7 +16,7 @@ class MainNavigationScreen extends StatefulWidget {
 }
 
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 3;
 
   void _onTap(int index) {
     setState(() {
@@ -54,9 +55,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
               offstage: _selectedIndex != 1, child: const DiscoverScreen()),
           Offstage(
             offstage: _selectedIndex != 3,
-            child: const Center(
-              child: Text('Inbox'),
-            ),
+            child: const InboxScreen(),
           ),
           Offstage(
             offstage: _selectedIndex != 4,
