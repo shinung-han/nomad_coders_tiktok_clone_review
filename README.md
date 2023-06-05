@@ -108,7 +108,10 @@ dev_dependencies:
 
 - [x] 9.0 Introduction (04:29)
 - [x] 9.1 Light Navigation (06:33)
-- [ ] 9.2 TabBar (12:07)
+- [x] 9.2 TabBar (12:07)
+  - DefaultTabController
+    - TabBar
+    - TabBarView
 - [ ] 9.3 GridView (07:30)
 - [ ] 9.4 Grid Item (16:20)
 - [ ] 9.5 CupertinoSearchTextField (10:34)
