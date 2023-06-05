@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone_2/constants/gaps.dart';
@@ -22,8 +21,26 @@ class DiscoverScreen extends StatefulWidget {
 }
 
 class _DiscoverScreenState extends State<DiscoverScreen> {
-  final TextEditingController _textEditingController =
-      TextEditingController(text: "Initial Text");
+  final TextEditingController _textEditingController = TextEditingController();
+
+  String _word = '';
+
+  bool _isWriting = false;
+
+  final FocusNode _focusNode = FocusNode();
+
+  @override
+  void initState() {
+    super.initState();
+    _textEditingController.addListener(() {
+      if (_textEditingController.text.isNotEmpty) {
+        setState(() {
+          _word = _textEditingController.text;
+          _isWriting = true;
+        });
+      }
+    });
+  }
 
   void _onSearchChanged(String value) {
     print('Searching form $value');
@@ -31,6 +48,13 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
 
   void _onSearchSubmitted(String value) {
     print('Submitted $value');
+  }
+
+  void _onDeleteWord() {
+    setState(() {
+      _textEditingController.clear();
+      _isWriting = false;
+    });
   }
 
   @override
@@ -47,12 +71,79 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
           elevation: 1,
-          title: CupertinoSearchTextField(
-            controller: _textEditingController,
-            onChanged: _onSearchChanged,
-            onSubmitted: _onSearchSubmitted,
+          title: Row(
+            children: [
+              Expanded(
+                child: SizedBox(
+                  height: Sizes.size48,
+                  child: TextField(
+                    focusNode: _focusNode,
+                    controller: _textEditingController,
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(
+                          Sizes.size8,
+                        ),
+                        borderSide: BorderSide.none,
+                      ),
+                      fillColor: Colors.grey.shade100,
+                      filled: true,
+                      hintText: 'Search..',
+                      prefixIcon: const Padding(
+                        padding: EdgeInsets.only(
+                          left: Sizes.size14,
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            FaIcon(
+                              FontAwesomeIcons.magnifyingGlass,
+                              color: Colors.black,
+                              size: Sizes.size20,
+                            ),
+                          ],
+                        ),
+                      ),
+                      suffixIcon: Padding(
+                        padding: const EdgeInsets.only(
+                          left: Sizes.size16,
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            if (_isWriting)
+                              GestureDetector(
+                                onTap: _onDeleteWord,
+                                child: FaIcon(
+                                  FontAwesomeIcons.circleXmark,
+                                  size: Sizes.size20,
+                                  color: Colors.grey.shade700,
+                                ),
+                              ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: Sizes.size16,
+                  right: Sizes.size4,
+                ),
+                child: Image.asset(
+                  'assets/images/filter.png',
+                  scale: 16,
+                ),
+              ),
+            ],
           ),
           bottom: TabBar(
+            onTap: (value) => _focusNode.unfocus(),
             splashFactory: NoSplash.splashFactory,
             padding: const EdgeInsets.symmetric(
               horizontal: Sizes.size16,
