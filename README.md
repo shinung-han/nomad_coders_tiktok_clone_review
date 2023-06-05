@@ -125,7 +125,7 @@ dev_dependencies:
 
 - [x] 10.0 ListTile (11:35)
 - [x] 10.1 RichText (13:35)
-- [ ] 10.2 Dismissible (06:45)
+- [x] 10.2 Dismissible (06:45)
 - [ ] 10.3 onDismissed (05:14)
 - [ ] 10.4 RotationTransition (09:45)
 - [ ] 10.5 SlideTransition (12:24)
