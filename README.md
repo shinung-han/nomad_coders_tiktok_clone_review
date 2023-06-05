@@ -117,7 +117,9 @@ dev_dependencies:
   - AspectRatio
   - FadeInImage.assetNetwork
   - DefaultTextStyle
-- [ ] 9.5 CupertinoSearchTextField (10:34)
+- [x] 9.5 CupertinoSearchTextField (10:34)
+  - GridView.builder
+    - keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
 
 ### 10 INBOX
 
