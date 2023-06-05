@@ -97,12 +97,12 @@ dev_dependencies:
   - showModalBottomSheet
     - isScrollControlled: true,
 - [x] 8.2 Add Comment (14:35)
+- [x] 8.3 Text Input Actions (10:56)
   - TextField
     - minLines: null,
     - maxLines: null,
     - textInputAction: TextInputAction.newline,
-- [ ] 8.3 Text Input Actions (10:56)
-- [ ] 8.4 Conclusions (02:26)
+- [x] 8.4 Conclusions (02:26)
 
 ### 9 DISCOVER
 
