@@ -112,8 +112,11 @@ dev_dependencies:
   - DefaultTabController
     - TabBar
     - TabBarView
-- [ ] 9.3 GridView (07:30)
-- [ ] 9.4 Grid Item (16:20)
+- [x] 9.3 GridView (07:30)
+- [x] 9.4 Grid Item (16:20)
+  - AspectRatio
+  - FadeInImage.assetNetwork
+  - DefaultTextStyle
 - [ ] 9.5 CupertinoSearchTextField (10:34)
 
 ### 10 INBOX

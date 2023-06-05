@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tiktok_clone_2/constants/gaps.dart';
 import 'package:tiktok_clone_2/constants/sizes.dart';
 
 final tabs = [
@@ -41,7 +43,72 @@ class DiscoverScreen extends StatelessWidget {
           ),
         ),
         body: TabBarView(children: [
-          for (var tab in tabs)
+          GridView.builder(
+            itemCount: 20,
+            padding: const EdgeInsets.all(Sizes.size6),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: Sizes.size10,
+              mainAxisSpacing: 10,
+              childAspectRatio: 9 / 20,
+            ),
+            itemBuilder: (context, index) => Column(
+              children: [
+                AspectRatio(
+                  aspectRatio: 9 / 16,
+                  child: FadeInImage.assetNetwork(
+                    placeholder: 'assets/images/placeholder.jpeg',
+                    image:
+                        'https://i.pinimg.com/736x/f0/da/7b/f0da7b3ad9989546c968b17abc3fda9f.jpg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Gaps.v10,
+                const Text(
+                  'This is very long caption for my tiktok that im upload just now currently.',
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 2,
+                  style: TextStyle(
+                    fontSize: Sizes.size16 + Sizes.size2,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Gaps.v8,
+                DefaultTextStyle(
+                  style: TextStyle(
+                    color: Colors.grey.shade600,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  child: const Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 12,
+                        backgroundImage: NetworkImage(
+                          'https://avatars.githubusercontent.com/u/118904460?v=4',
+                        ),
+                      ),
+                      Gaps.h4,
+                      Expanded(
+                        child: Text(
+                          'My avatar is going to be very long',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      Gaps.h4,
+                      FaIcon(
+                        FontAwesomeIcons.heart,
+                        size: Sizes.size16,
+                      ),
+                      Gaps.h2,
+                      Text('2.5M'),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+          for (var tab in tabs.skip(1))
             Center(
               child: Text(
                 tab,
