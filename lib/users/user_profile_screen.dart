@@ -77,26 +77,33 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                       ),
                     ),
                     Gaps.v14,
-                    FractionallySizedBox(
-                      widthFactor: 0.33,
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: Sizes.size12,
-                        ),
-                        decoration: BoxDecoration(
-                            color: Theme.of(context).primaryColor,
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(Sizes.size4),
-                            )),
-                        child: const Text(
-                          'Follower',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: Sizes.size16,
+                            horizontal: 50,
                           ),
-                          textAlign: TextAlign.center,
+                          decoration: BoxDecoration(
+                              color: Theme.of(context).primaryColor,
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(Sizes.size4),
+                              )),
+                          child: const Text(
+                            'Follower',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
-                      ),
+                        Gaps.h5,
+                        _userIcon(FontAwesomeIcons.youtube),
+                        Gaps.h5,
+                        _userIcon(FontAwesomeIcons.caretDown),
+                      ],
                     ),
                     Gaps.v14,
                     const Padding(
@@ -151,14 +158,37 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                 ),
                 itemBuilder: (context, index) => Column(
                   children: [
-                    AspectRatio(
-                      aspectRatio: 9 / 14,
-                      child: FadeInImage.assetNetwork(
-                        placeholder: 'assets/images/placeholder.jpeg',
-                        image:
-                            'https://i.pinimg.com/736x/f0/da/7b/f0da7b3ad9989546c968b17abc3fda9f.jpg',
-                        fit: BoxFit.cover,
-                      ),
+                    Stack(
+                      children: [
+                        AspectRatio(
+                          aspectRatio: 9 / 14,
+                          child: FadeInImage.assetNetwork(
+                            placeholder: 'assets/images/placeholder.jpeg',
+                            image:
+                                'https://i.pinimg.com/736x/f0/da/7b/f0da7b3ad9989546c968b17abc3fda9f.jpg',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        const Positioned(
+                          bottom: 0,
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.play_arrow_outlined,
+                                color: Colors.white,
+                              ),
+                              Gaps.h4,
+                              Text(
+                                '4.1M',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
                     ),
                   ],
                 ),
@@ -169,6 +199,26 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Container _userIcon(IconData icon) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.grey.shade300,
+        ),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(
+            Sizes.size4,
+          ),
+        ),
+      ),
+      child: Center(
+        child: FaIcon(icon),
       ),
     );
   }
