@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone_2/constants/sizes.dart';
-import 'package:tiktok_clone_2/features/discover/activity_screen.dart';
+import 'package:tiktok_clone_2/features/main_navigation/main_navigation_screen.dart';
 
 void main() {
   runApp(
@@ -37,7 +37,7 @@ class TikTokApp extends StatelessWidget {
         ),
         // useMaterial3: true,
       ),
-      home: const ActivityScreen(),
+      home: const MainNavigationScreen(),
     );
   }
 }
