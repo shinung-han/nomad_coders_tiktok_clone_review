@@ -161,8 +161,8 @@ dev_dependencies:
 - [x] 13.2 showDateRangePicker (07:42)
 - [x] 13.3 SwitchListTile (06:37)
 - [x] 13.4 CupertinoAlertDialog (04:15)
-- [ ] 13.5 CupertinoActionSheet (04:06)
-- [ ] 13.6 Conclusions (03:07)
+- [x] 13.5 CupertinoActionSheet (04:06)
+- [x] 13.6 Conclusions (03:07)
 
 ### 14 RESPONSIVE FLUTTER WEB
 
