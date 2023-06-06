@@ -138,7 +138,7 @@ dev_dependencies:
 - [x] 11.1 Direct Messages (11:09)
 - [x] 11.2 AnimatedList (09:05)
 - [x] 11.3 AnimatedList part Two (08:55)
-- [ ] 11.4 Chat Detail (13:38)
+- [x] 11.4 Chat Detail (13:38)
 
 ### 12 USER PROFILE
 
