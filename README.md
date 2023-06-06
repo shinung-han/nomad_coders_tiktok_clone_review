@@ -142,11 +142,11 @@ dev_dependencies:
 
 ### 12 USER PROFILE
 
-- [ ] 12.0 Introduction (04:01)
-- [ ] 12.1 CustomScrollView (06:44)
-- [ ] 12.2 SliverAppBar (08:19)
-- [ ] 12.3 SliverGrid (04:06)
-- [ ] 12.4 SliverPersistentHeader (10:33)
+- [x] 12.0 Introduction (04:01)
+- [x] 12.1 CustomScrollView (06:44)
+- [x] 12.2 SliverAppBar (08:19)
+- [x] 12.3 SliverGrid (04:06)
+- [x] 12.4 SliverPersistentHeader (10:33)
 - [ ] 12.5 VerticalDivider (13:50)
 - [ ] 12.6 TabBar (16:27)
 - [ ] 12.7 PersistentTabBar (09:46)

@@ -22,7 +22,6 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
   }
 
   String _onSubmitted(String val) {
-    print(val);
     setState(() {
       _isWriting = false;
     });
