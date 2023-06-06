@@ -152,14 +152,14 @@ dev_dependencies:
 - [x] 12.6 TabBar (16:27)
 - [x] 12.7 PersistentTabBar (09:46)
   - SliverPersistentHeader
-- [ ] 12.8 Conclusions (03:57)
+- [x] 12.8 Conclusions (03:57)
 
 ### 13 SETTINGS
 
-- [ ] 13.0 ListWheelScrollView (08:26)
-- [ ] 13.1 AboutListTile (04:21)
-- [ ] 13.2 showDateRangePicker (07:42)
-- [ ] 13.3 SwitchListTile (06:37)
+- [x] 13.0 ListWheelScrollView (08:26)
+- [x] 13.1 AboutListTile (04:21)
+- [x] 13.2 showDateRangePicker (07:42)
+- [x] 13.3 SwitchListTile (06:37)
 - [ ] 13.4 CupertinoAlertDialog (04:15)
 - [ ] 13.5 CupertinoActionSheet (04:06)
 - [ ] 13.6 Conclusions (03:07)
