@@ -149,7 +149,7 @@ dev_dependencies:
 - [x] 12.4 SliverPersistentHeader (10:33)
 - [x] 12.5 VerticalDivider (13:50)
   - VerticalDivider
-- [ ] 12.6 TabBar (16:27)
+- [x] 12.6 TabBar (16:27)
 - [ ] 12.7 PersistentTabBar (09:46)
 - [ ] 12.8 Conclusions (03:57)
 
