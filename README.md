@@ -172,9 +172,9 @@ dev_dependencies:
   - SystemChrome.setSystemUIOverlayStyle
 - [x] 14.2 kIsWeb (06:10)
 - [x] 14.3 MediaQuery (05:09)
-- [ ] 14.4 LayoutBuilder (12:23)
-- [ ] 14.5 ConstrainedBox (03:08)
-- [ ] 14.6 Code Challenge (02:14)
+- [x] 14.4 LayoutBuilder (12:23)
+- [x] 14.5 ConstrainedBox (03:08)
+- [x] 14.6 Code Challenge (02:14)
 
 ### 15 DARK MODE
 
