@@ -31,6 +31,7 @@ class _VideoPostState extends State<VideoPost>
   late final AnimationController _animationController;
 
   bool _isPaused = false;
+  bool _volume = true;
 
   final Duration _animationDuration = const Duration(milliseconds: 150);
 
@@ -48,6 +49,9 @@ class _VideoPostState extends State<VideoPost>
     await _videoPlayerController.setLooping(true);
     if (kIsWeb) {
       await _videoPlayerController.setVolume(0);
+      setState(() {
+        _volume = false;
+      });
     }
     setState(() {});
     _videoPlayerController.addListener(_onVideochange);
@@ -111,6 +115,28 @@ class _VideoPostState extends State<VideoPost>
       },
     );
     _onTogglePause();
+  }
+
+  void _onVolumePressed() {
+    if (kIsWeb) {
+      _setVolume();
+    } else {
+      _setVolume();
+    }
+  }
+
+  void _setVolume() async {
+    if (_volume == false) {
+      await _videoPlayerController.setVolume(100);
+      setState(() {
+        _volume = true;
+      });
+    } else {
+      await _videoPlayerController.setVolume(0);
+      setState(() {
+        _volume = false;
+      });
+    }
   }
 
   @override
@@ -214,6 +240,19 @@ class _VideoPostState extends State<VideoPost>
                   text: 'Share',
                 ),
               ],
+            ),
+          ),
+          Positioned(
+            right: Sizes.size14,
+            top: Sizes.size52,
+            child: IconButton(
+              icon: FaIcon(
+                _volume
+                    ? FontAwesomeIcons.volumeHigh
+                    : FontAwesomeIcons.volumeXmark,
+                color: Colors.white,
+              ),
+              onPressed: _onVolumePressed,
             ),
           ),
         ],
