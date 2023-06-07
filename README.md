@@ -166,8 +166,8 @@ dev_dependencies:
 
 ### 14 RESPONSIVE FLUTTER WEB
 
-- [ ] 14.0 Introduction (03:05)
-- [ ] 14.1 OrientationBuilder (13:47)
+- [x] 14.0 Introduction (03:05)
+- [x] 14.1 OrientationBuilder (13:47)
 - [ ] 14.2 kIsWeb (06:10)
 - [ ] 14.3 MediaQuery (05:09)
 - [ ] 14.4 LayoutBuilder (12:23)
