@@ -174,7 +174,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                           child: FadeInImage.assetNetwork(
                             placeholder: 'assets/images/placeholder.jpeg',
                             image:
-                                'https://i.pinimg.com/736x/f0/da/7b/f0da7b3ad9989546c968b17abc3fda9f.jpg',
+                                'https://images.unsplash.com/photo-1627454819213-4b261f3c3b90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=998&q=80',
                             fit: BoxFit.cover,
                           ),
                         ),

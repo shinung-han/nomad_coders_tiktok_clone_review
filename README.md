@@ -168,7 +168,9 @@ dev_dependencies:
 
 - [x] 14.0 Introduction (03:05)
 - [x] 14.1 OrientationBuilder (13:47)
-- [ ] 14.2 kIsWeb (06:10)
+  - SystemChrome.setPreferredOrientations
+  - SystemChrome.setSystemUIOverlayStyle
+- [x] 14.2 kIsWeb (06:10)
 - [ ] 14.3 MediaQuery (05:09)
 - [ ] 14.4 LayoutBuilder (12:23)
 - [ ] 14.5 ConstrainedBox (03:08)
