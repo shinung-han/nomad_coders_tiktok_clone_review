@@ -187,8 +187,8 @@ dev_dependencies:
 - [x] 15.3 Google Fonts (05:47)
 - [x] 15.4 Typography (10:10)
 - [x] 15.5 Dark Mode part One (08:03)
-- [ ] 15.6 Dark Mode part Two (12:36)
-- [ ] 15.7 Dark Mode part Three (04:58)
+- [x] 15.6 Dark Mode part Two (12:36)
+- [x] 15.7 Dark Mode part Three (04:58)
 - [ ] 15.8 Material 3 Migration (13:23)
 - [ ] 15.9 Conclusions (06:08)
 
