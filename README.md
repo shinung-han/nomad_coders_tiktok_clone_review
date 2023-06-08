@@ -189,8 +189,8 @@ dev_dependencies:
 - [x] 15.5 Dark Mode part One (08:03)
 - [x] 15.6 Dark Mode part Two (12:36)
 - [x] 15.7 Dark Mode part Three (04:58)
-- [ ] 15.8 Material 3 Migration (13:23)
-- [ ] 15.9 Conclusions (06:08)
+- [x] 15.8 Material 3 Migration (13:23)
+- [x] 15.9 Conclusions (06:08)
 
 ### 16 APP TRANSLATION
 

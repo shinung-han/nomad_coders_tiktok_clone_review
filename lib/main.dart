@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tiktok_clone_2/constants/sizes.dart';
-import 'package:tiktok_clone_2/features/main_navigation/main_navigation_screen.dart';
+import 'package:tiktok_clone_2/features/authentication/sign_up_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,6 +32,7 @@ class TikTokApp extends StatelessWidget {
       title: 'TikTok Clone Review',
       themeMode: ThemeMode.system,
       theme: ThemeData(
+        // useMaterial3: true,
         brightness: Brightness.light,
         textTheme: Typography.blackCupertino,
         scaffoldBackgroundColor: Colors.white,
@@ -59,7 +60,6 @@ class TikTokApp extends StatelessWidget {
         listTileTheme: const ListTileThemeData(
           iconColor: Colors.black,
         ),
-        // useMaterial3: true,
       ),
       darkTheme: ThemeData(
         tabBarTheme: const TabBarTheme(
@@ -79,7 +79,7 @@ class TikTokApp extends StatelessWidget {
         ),
         primaryColor: const Color(0xffe9435a),
       ),
-      home: const MainNavigationScreen(),
+      home: const SignUpScreen(),
     );
   }
 }
