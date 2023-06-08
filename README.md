@@ -218,7 +218,7 @@ flutter:
 - [x] 17.1 await push() (05:20)
 - [x] 17.2 PageRouteBuilder (09:30)
 - [x] 17.3 pushNamed (07:34)
-- [ ] 17.4 pushNamed Args (07:54)
+- [x] 17.4 pushNamed Args (07:54)
 - [ ] 17.5 Conclusions (02:04)
 
 ### 18 NAVIGATOR 2
