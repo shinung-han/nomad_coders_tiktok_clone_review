@@ -19,6 +19,9 @@ dependencies:
   google_fonts: 4.0.1
 
 dev_dependencies:
+
+flutter:
+  generate: true
 ```
 
 ### 1 ❤️ THANK YOU
@@ -211,8 +214,8 @@ dev_dependencies:
 
 ### 17 NAVIGATOR DEEP DIVE
 
-- [ ] 17.0 Introduction (02:51)
-- [ ] 17.1 await push() (05:20)
+- [x] 17.0 Introduction (02:51)
+- [x] 17.1 await push() (05:20)
 - [ ] 17.2 PageRouteBuilder (09:30)
 - [ ] 17.3 pushNamed (07:34)
 - [ ] 17.4 pushNamed Args (07:54)
