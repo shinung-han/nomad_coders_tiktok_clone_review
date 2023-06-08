@@ -202,7 +202,7 @@ dev_dependencies:
 - [x] 16.1 Localizations (08:41)
   - localizationsDelegates
   - supportedLocales
-- [ ] 16.2 l10n (09:02)
+- [x] 16.2 l10n (09:02)
 - [ ] 16.3 AppLocalizations (08:23)
 - [ ] 16.4 Flutter Intl (09:09)
 - [ ] 16.5 Pluralize and Select (06:37)
