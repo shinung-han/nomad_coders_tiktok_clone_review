@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tiktok_clone_2/constants/sizes.dart';
-import 'package:tiktok_clone_2/features/discover/discover_screen.dart';
+import 'package:tiktok_clone_2/features/main_navigation/main_navigation_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -51,12 +51,23 @@ class TikTokApp extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
+        tabBarTheme: TabBarTheme(
+          labelColor: Colors.black,
+          unselectedLabelColor: Colors.grey.shade500,
+          indicatorColor: Colors.black,
+        ),
         // useMaterial3: true,
       ),
       darkTheme: ThemeData(
+        tabBarTheme: const TabBarTheme(
+          indicatorColor: Colors.white,
+        ),
         brightness: Brightness.dark,
         textTheme: Typography.whiteCupertino,
         scaffoldBackgroundColor: Colors.black,
+        textSelectionTheme: const TextSelectionThemeData(
+          cursorColor: Color(0xffe9435a),
+        ),
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.grey.shade900,
         ),
@@ -65,7 +76,7 @@ class TikTokApp extends StatelessWidget {
         ),
         primaryColor: const Color(0xffe9435a),
       ),
-      home: const DiscoverScreen(),
+      home: const MainNavigationScreen(),
     );
   }
 }

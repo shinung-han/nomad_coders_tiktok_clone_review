@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone_2/constants/breakpoints.dart';
 import 'package:tiktok_clone_2/constants/gaps.dart';
 import 'package:tiktok_clone_2/constants/sizes.dart';
+import 'package:tiktok_clone_2/utils.dart';
 
 final tabs = [
   "Top",
@@ -94,11 +95,13 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                           ),
                           borderSide: BorderSide.none,
                         ),
-                        fillColor: Colors.grey.shade100,
+                        fillColor: isDarkMode(context)
+                            ? Colors.grey.shade800
+                            : Colors.grey.shade100,
                         filled: true,
                         hintText: 'Search..',
-                        prefixIcon: const Padding(
-                          padding: EdgeInsets.only(
+                        prefixIcon: Padding(
+                          padding: const EdgeInsets.only(
                             left: Sizes.size14,
                           ),
                           child: Row(
@@ -106,7 +109,9 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                             children: [
                               FaIcon(
                                 FontAwesomeIcons.magnifyingGlass,
-                                color: Colors.black,
+                                color: isDarkMode(context)
+                                    ? Colors.grey.shade500
+                                    : Colors.black,
                                 size: Sizes.size20,
                               ),
                             ],
@@ -125,7 +130,9 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                                   child: FaIcon(
                                     FontAwesomeIcons.circleXmark,
                                     size: Sizes.size20,
-                                    color: Colors.grey.shade700,
+                                    color: isDarkMode(context)
+                                        ? Colors.grey.shade500
+                                        : Colors.grey.shade700,
                                   ),
                                 ),
                             ],
@@ -143,6 +150,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                   child: Image.asset(
                     'assets/images/filter.png',
                     scale: 16,
+                    color: isDarkMode(context) ? Colors.grey.shade400 : null,
                   ),
                 ),
               ],
@@ -159,9 +167,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
               fontWeight: FontWeight.w600,
               fontSize: Sizes.size16,
             ),
-            labelColor: Colors.black,
-            unselectedLabelColor: Colors.grey.shade500,
-            indicatorColor: Colors.black,
+            indicatorColor: Theme.of(context).tabBarTheme.indicatorColor,
             tabs: [
               for (var tab in tabs) Tab(text: tab),
             ],
@@ -201,49 +207,51 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                         ),
                       ),
                       Gaps.v10,
-                      Text(
-                        '${constraints.maxWidth} This is very long caption for my tiktok that im upload just now currently.',
+                      const Text(
+                        'This is very long caption for my tiktok that im upload just now currently.',
                         overflow: TextOverflow.ellipsis,
                         maxLines: 2,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: Sizes.size16 + Sizes.size2,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Gaps.v8,
-                      if (constraints.maxWidth > 250 ||
-                          constraints.maxWidth < 200)
-                        DefaultTextStyle(
-                          style: TextStyle(
-                            color: Colors.grey.shade600,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          child: const Row(
-                            children: [
-                              CircleAvatar(
-                                radius: 12,
-                                backgroundImage: NetworkImage(
-                                  'https://avatars.githubusercontent.com/u/118904460?v=4',
-                                ),
+                      // if (constraints.maxWidth > 250 ||
+                      //     constraints.maxWidth < 200)
+                      DefaultTextStyle(
+                        style: TextStyle(
+                          color: isDarkMode(context)
+                              ? Colors.grey.shade300
+                              : Colors.grey.shade600,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        child: const Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 12,
+                              backgroundImage: NetworkImage(
+                                'https://avatars.githubusercontent.com/u/118904460?v=4',
                               ),
-                              Gaps.h4,
-                              Expanded(
-                                child: Text(
-                                  'My avatar is going to be very long',
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
+                            ),
+                            Gaps.h4,
+                            Expanded(
+                              child: Text(
+                                'My avatar is going to be very long',
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                               ),
-                              Gaps.h4,
-                              FaIcon(
-                                FontAwesomeIcons.heart,
-                                size: Sizes.size16,
-                              ),
-                              Gaps.h2,
-                              Text('2.5M'),
-                            ],
-                          ),
-                        )
+                            ),
+                            Gaps.h4,
+                            FaIcon(
+                              FontAwesomeIcons.heart,
+                              size: Sizes.size16,
+                            ),
+                            Gaps.h2,
+                            Text('2.5M'),
+                          ],
+                        ),
+                      )
                     ],
                   );
                 },
