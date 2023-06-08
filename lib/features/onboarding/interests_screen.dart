@@ -163,6 +163,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
               ),
               decoration: BoxDecoration(
                 color: Theme.of(context).primaryColor,
+                borderRadius: BorderRadius.circular(Sizes.size10),
               ),
               child: const Text(
                 'Next',

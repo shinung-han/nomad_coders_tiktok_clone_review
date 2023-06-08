@@ -184,8 +184,8 @@ dev_dependencies:
   - themeMode
   - utils.dart -> isDarkMode
 - [x] 15.2 TextTheme (13:31)
-- [ ] 15.3 Google Fonts (05:47)
-- [ ] 15.4 Typography (10:10)
+- [x] 15.3 Google Fonts (05:47)
+- [x] 15.4 Typography (10:10)
 - [ ] 15.5 Dark Mode part One (08:03)
 - [ ] 15.6 Dark Mode part Two (12:36)
 - [ ] 15.7 Dark Mode part Three (04:58)
