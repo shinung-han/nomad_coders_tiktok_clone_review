@@ -178,8 +178,8 @@ dev_dependencies:
 
 ### 15 DARK MODE
 
-- [ ] 15.0 Introduction (03:39)
-- [ ] 15.1 ThemeMode (13:02)
+- [x] 15.0 Introduction (03:39)
+- [x] 15.1 ThemeMode (13:02)
 - [ ] 15.2 TextTheme (13:31)
 - [ ] 15.3 Google Fonts (05:47)
 - [ ] 15.4 Typography (10:10)
