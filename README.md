@@ -12,6 +12,7 @@ dependencies:
     font_awesome_flutter: 10.3.0
     video_player: 2.4.10
     visibility_detector: 0.3.3
+    google_fonts: 4.0.1
 
 dev_dependencies:
 ```
@@ -180,7 +181,9 @@ dev_dependencies:
 
 - [x] 15.0 Introduction (03:39)
 - [x] 15.1 ThemeMode (13:02)
-- [ ] 15.2 TextTheme (13:31)
+  - themeMode
+  - utils.dart -> isDarkMode
+- [x] 15.2 TextTheme (13:31)
 - [ ] 15.3 Google Fonts (05:47)
 - [ ] 15.4 Typography (10:10)
 - [ ] 15.5 Dark Mode part One (08:03)
