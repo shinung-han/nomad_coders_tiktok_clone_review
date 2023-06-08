@@ -9,10 +9,14 @@
 
 ```
 dependencies:
-    font_awesome_flutter: 10.3.0
-    video_player: 2.4.10
-    visibility_detector: 0.3.3
-    google_fonts: 4.0.1
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
+  font_awesome_flutter: 10.3.0
+  video_player: 2.4.10
+  visibility_detector: 0.3.3
+  google_fonts: 4.0.1
 
 dev_dependencies:
 ```
@@ -194,8 +198,10 @@ dev_dependencies:
 
 ### 16 APP TRANSLATION
 
-- [ ] 16.0 Introduction (02:24)
-- [ ] 16.1 Localizations (08:41)
+- [x] 16.0 Introduction (02:24)
+- [x] 16.1 Localizations (08:41)
+  - localizationsDelegates
+  - supportedLocales
 - [ ] 16.2 l10n (09:02)
 - [ ] 16.3 AppLocalizations (08:23)
 - [ ] 16.4 Flutter Intl (09:09)
