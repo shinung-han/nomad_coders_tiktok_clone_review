@@ -17,6 +17,7 @@ dependencies:
   video_player: 2.4.10
   visibility_detector: 0.3.3
   google_fonts: 4.0.1
+  go_router: 6.0.2
 
 dev_dependencies:
 
@@ -219,12 +220,12 @@ flutter:
 - [x] 17.2 PageRouteBuilder (09:30)
 - [x] 17.3 pushNamed (07:34)
 - [x] 17.4 pushNamed Args (07:54)
-- [ ] 17.5 Conclusions (02:04)
+- [x] 17.5 Conclusions (02:04)
 
 ### 18 NAVIGATOR 2
 
-- [ ] 18.0 Introduction (07:22)
-- [ ] 18.1 GoRouter (09:46)
+- [x] 18.0 Introduction (07:22)
+- [x] 18.1 GoRouter (09:46)
 - [ ] 18.2 Parameters (06:37)
 - [ ] 18.3 queryParams (07:52)
 - [ ] 18.4 CustomTransitionPage (12:00)
