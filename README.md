@@ -216,8 +216,8 @@ flutter:
 
 - [x] 17.0 Introduction (02:51)
 - [x] 17.1 await push() (05:20)
-- [ ] 17.2 PageRouteBuilder (09:30)
-- [ ] 17.3 pushNamed (07:34)
+- [x] 17.2 PageRouteBuilder (09:30)
+- [x] 17.3 pushNamed (07:34)
 - [ ] 17.4 pushNamed Args (07:54)
 - [ ] 17.5 Conclusions (02:04)
 
