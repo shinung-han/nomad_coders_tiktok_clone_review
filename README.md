@@ -228,8 +228,8 @@ flutter:
 - [x] 18.1 GoRouter (09:46)
 - [x] 18.2 Parameters (06:37)
 - [x] 18.3 queryParams (07:52)
-- [ ] 18.4 CustomTransitionPage (12:00)
-- [ ] 18.5 Conclusions (02:13)
+- [x] 18.4 CustomTransitionPage (12:00)
+- [x] 18.5 Conclusions (02:13)
 
 ### 19 VIDEO RECORDING
 
