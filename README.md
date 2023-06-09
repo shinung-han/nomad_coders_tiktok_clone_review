@@ -226,8 +226,8 @@ flutter:
 
 - [x] 18.0 Introduction (07:22)
 - [x] 18.1 GoRouter (09:46)
-- [ ] 18.2 Parameters (06:37)
-- [ ] 18.3 queryParams (07:52)
+- [x] 18.2 Parameters (06:37)
+- [x] 18.3 queryParams (07:52)
 - [ ] 18.4 CustomTransitionPage (12:00)
 - [ ] 18.5 Conclusions (02:13)
 
