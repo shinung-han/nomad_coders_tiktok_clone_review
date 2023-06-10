@@ -238,7 +238,7 @@ flutter:
 - [x] 19.0 Introduction (06:47)
 - [x] 19.1 Installation (06:11)
 - [x] 19.2 CameraController (13:02)
-- [ ] 19.3 Selfie Mode (04:10)
+- [x] 19.3 Selfie Mode (04:10)
 - [ ] 19.4 Flash Mode (05:45)
 - [ ] 19.5 Recording Animation (15:33)
 - [ ] 19.6 startVideoRecording (10:44)
