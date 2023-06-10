@@ -18,6 +18,8 @@ dependencies:
   visibility_detector: 0.3.3
   google_fonts: 4.0.1
   go_router: 6.0.2
+  camera: ^0.10.5+2
+  permission_handler: ^10.3.0
 
 dev_dependencies:
 
@@ -233,9 +235,9 @@ flutter:
 
 ### 19 VIDEO RECORDING
 
-- [ ] 19.0 Introduction (06:47)
-- [ ] 19.1 Installation (06:11)
-- [ ] 19.2 CameraController (13:02)
+- [x] 19.0 Introduction (06:47)
+- [x] 19.1 Installation (06:11)
+- [x] 19.2 CameraController (13:02)
 - [ ] 19.3 Selfie Mode (04:10)
 - [ ] 19.4 Flash Mode (05:45)
 - [ ] 19.5 Recording Animation (15:33)
