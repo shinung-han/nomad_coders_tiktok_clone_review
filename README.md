@@ -258,7 +258,7 @@ flutter:
 - [x] 20.6 InheritedWidget (14:48)
 - [x] 20.7 InheritedWidget part Two (16:38)
 - [x] 20.8 Recap (05:21)
-- [ ] 20.9 ChangeNotifier (12:13)
+- [x] 20.9 ChangeNotifier (12:13)
 - [ ] 20.10 ValueNotifier (05:25)
 - [ ] 20.11 Provider (11:37)
 
