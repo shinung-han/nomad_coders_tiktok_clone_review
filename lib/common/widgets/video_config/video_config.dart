@@ -1,3 +1,4 @@
+// InheritiedWidget
 /* import 'package:flutter/material.dart';
 
 class VideoConfigData extends InheritedWidget {
@@ -53,7 +54,8 @@ class _VideoConfigState extends State<VideoConfig> {
 }
  */
 
-import 'package:flutter/foundation.dart';
+// ChangeNotifier
+/* import 'package:flutter/foundation.dart';
 
 class VideoConfig extends ChangeNotifier {
   bool autoMute = true;
@@ -64,4 +66,9 @@ class VideoConfig extends ChangeNotifier {
   }
 }
 
-final videoConfig = VideoConfig();
+final videoConfig = VideoConfig(); */
+
+// ValueNotifier
+import 'package:flutter/foundation.dart';
+
+final videoConfig = ValueNotifier(false);
