@@ -253,7 +253,7 @@ flutter:
 - [x] 20.1 \_noCamera (05:39)
 - [x] 20.2 Router part One (11:04)
 - [x] 20.3 Router part Two (11:58)
-- [ ] 20.4 Router part Three (12:09)
+- [x] 20.4 Router part Three (12:09)
 - [ ] 20.5 Router part Four (05:51)
 - [ ] 20.6 InheritedWidget (14:48)
 - [ ] 20.7 InheritedWidget part Two (16:38)

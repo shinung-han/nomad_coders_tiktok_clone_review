@@ -2,15 +2,19 @@ import 'package:go_router/go_router.dart';
 import 'package:tiktok_clone_2/common/widgets/main_navigation/main_navigation_screen.dart';
 import 'package:tiktok_clone_2/features/authentication/login_screen.dart';
 import 'package:tiktok_clone_2/features/authentication/sign_up_screen.dart';
+import 'package:tiktok_clone_2/features/discover/activity_screen.dart';
+import 'package:tiktok_clone_2/features/inbox/chat_detail_screen.dart';
+import 'package:tiktok_clone_2/features/inbox/chats_screen.dart';
 import 'package:tiktok_clone_2/features/onboarding/interests_screen.dart';
+import 'package:tiktok_clone_2/features/videos/video_recording_screen.dart';
 
 final router = GoRouter(
+  initialLocation: '/home',
   routes: [
     GoRoute(
       name: SignUpScreen.routeName,
       path: SignUpScreen.routeURL,
       builder: (context, state) => const SignUpScreen(),
-      routes: const [],
     ),
     GoRoute(
       name: LoginScreen.routeName,
@@ -30,6 +34,33 @@ final router = GoRouter(
 
         return MainNavigationScreen(tab: tab);
       },
+    ),
+    GoRoute(
+      path: ActivityScreen.routeURL,
+      name: ActivityScreen.routeName,
+      builder: (context, state) => const ActivityScreen(),
+    ),
+    GoRoute(
+      path: ChatsScreen.routeURL,
+      name: ChatsScreen.routeName,
+      builder: (context, state) => const ChatsScreen(),
+      routes: [
+        GoRoute(
+          path: ChatDetailScreen.routeURL,
+          name: ChatDetailScreen.routeName,
+          builder: (context, state) {
+            final chatId = state.params['chatId']!;
+            return ChatDetailScreen(
+              chatId: chatId,
+            );
+          },
+        ),
+      ],
+    ),
+    GoRoute(
+      path: VideoRecordingScreen.routeURL,
+      name: VideoRecordingScreen.routeName,
+      builder: (context, state) => const VideoRecordingScreen(),
     ),
   ],
 );
