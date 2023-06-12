@@ -240,7 +240,7 @@ flutter:
 - [x] 19.2 CameraController (13:02)
 - [x] 19.3 Selfie Mode (04:10)
 - [x] 19.4 Flash Mode (05:45)
-- [ ] 19.5 Recording Animation (15:33)
+- [x] 19.5 Recording Animation (15:33)
 - [ ] 19.6 startVideoRecording (10:44)
 - [ ] 19.7 GallerySaver (05:05)
 - [ ] 19.8 ImagePicker (08:56)
