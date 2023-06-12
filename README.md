@@ -243,9 +243,9 @@ flutter:
 - [x] 19.5 Recording Animation (15:33)
 - [x] 19.6 startVideoRecording (10:44)
 - [x] 19.7 GallerySaver (05:05)
-- [ ] 19.8 ImagePicker (08:56)
-- [ ] 19.9 AppLifecycleState (08:41)
-- [ ] 19.10 Code Challenge (05:40)
+- [x] 19.8 ImagePicker (08:56)
+- [x] 19.9 AppLifecycleState (08:41)
+- [x] 19.10 Code Challenge (05:40)
 
 ### 20 STATE MANAGEMENT
 
