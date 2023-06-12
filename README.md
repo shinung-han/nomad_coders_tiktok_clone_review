@@ -242,7 +242,7 @@ flutter:
 - [x] 19.4 Flash Mode (05:45)
 - [x] 19.5 Recording Animation (15:33)
 - [x] 19.6 startVideoRecording (10:44)
-- [ ] 19.7 GallerySaver (05:05)
+- [x] 19.7 GallerySaver (05:05)
 - [ ] 19.8 ImagePicker (08:56)
 - [ ] 19.9 AppLifecycleState (08:41)
 - [ ] 19.10 Code Challenge (05:40)
