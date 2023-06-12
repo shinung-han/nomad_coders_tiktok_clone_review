@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:camera/camera.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:image_picker/image_picker.dart';
@@ -20,6 +23,8 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
   bool _hasPermission = false;
 
   bool _isSelfieMode = false;
+
+  late final bool _noCamera = kDebugMode && Platform.isIOS;
 
   late final AnimationController _buttonAnimationController =
       AnimationController(
@@ -80,7 +85,13 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
   @override
   void initState() {
     super.initState();
-    initPermissions();
+    if (!_noCamera) {
+      initPermissions();
+    } else {
+      setState(() {
+        _hasPermission = true;
+      });
+    }
     WidgetsBinding.instance.addObserver(this);
     _progressanimationController.addListener(() {
       setState(() {});
@@ -174,7 +185,7 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
       backgroundColor: Colors.black,
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
-        child: !_hasPermission || !_cameraController.value.isInitialized
+        child: !_hasPermission
             ? const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -193,48 +204,50 @@ class _VideoRecordingScreenState extends State<VideoRecordingScreen>
             : Stack(
                 alignment: Alignment.center,
                 children: [
-                  CameraPreview(_cameraController),
-                  Positioned(
-                    top: Sizes.size60,
-                    right: Sizes.size20,
-                    child: Column(
-                      children: [
-                        IconButton(
-                          color: Colors.white,
-                          icon: const Icon(Icons.cameraswitch),
-                          onPressed: _toggleSelfieMode,
-                        ),
-                        Gaps.v10,
-                        FlashModeButton(
-                          icon: Icons.flash_off_rounded,
-                          nowFlashMode: _flashMode,
-                          flashMode: FlashMode.off,
-                          setFlashMode: () => _setFlashMode(FlashMode.off),
-                        ),
-                        Gaps.v10,
-                        FlashModeButton(
-                          icon: Icons.flash_on_rounded,
-                          nowFlashMode: _flashMode,
-                          flashMode: FlashMode.always,
-                          setFlashMode: () => _setFlashMode(FlashMode.always),
-                        ),
-                        Gaps.v10,
-                        FlashModeButton(
-                          icon: Icons.flash_auto_rounded,
-                          nowFlashMode: _flashMode,
-                          flashMode: FlashMode.auto,
-                          setFlashMode: () => _setFlashMode(FlashMode.auto),
-                        ),
-                        Gaps.v10,
-                        FlashModeButton(
-                          icon: Icons.flashlight_on,
-                          nowFlashMode: _flashMode,
-                          flashMode: FlashMode.torch,
-                          setFlashMode: () => _setFlashMode(FlashMode.torch),
-                        ),
-                      ],
+                  if (!_noCamera && _cameraController.value.isInitialized)
+                    CameraPreview(_cameraController),
+                  if (!_noCamera)
+                    Positioned(
+                      top: Sizes.size60,
+                      right: Sizes.size20,
+                      child: Column(
+                        children: [
+                          IconButton(
+                            color: Colors.white,
+                            icon: const Icon(Icons.cameraswitch),
+                            onPressed: _toggleSelfieMode,
+                          ),
+                          Gaps.v10,
+                          FlashModeButton(
+                            icon: Icons.flash_off_rounded,
+                            nowFlashMode: _flashMode,
+                            flashMode: FlashMode.off,
+                            setFlashMode: () => _setFlashMode(FlashMode.off),
+                          ),
+                          Gaps.v10,
+                          FlashModeButton(
+                            icon: Icons.flash_on_rounded,
+                            nowFlashMode: _flashMode,
+                            flashMode: FlashMode.always,
+                            setFlashMode: () => _setFlashMode(FlashMode.always),
+                          ),
+                          Gaps.v10,
+                          FlashModeButton(
+                            icon: Icons.flash_auto_rounded,
+                            nowFlashMode: _flashMode,
+                            flashMode: FlashMode.auto,
+                            setFlashMode: () => _setFlashMode(FlashMode.auto),
+                          ),
+                          Gaps.v10,
+                          FlashModeButton(
+                            icon: Icons.flashlight_on,
+                            nowFlashMode: _flashMode,
+                            flashMode: FlashMode.torch,
+                            setFlashMode: () => _setFlashMode(FlashMode.torch),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
                   Positioned(
                       bottom: Sizes.size40,
                       width: MediaQuery.of(context).size.width,
