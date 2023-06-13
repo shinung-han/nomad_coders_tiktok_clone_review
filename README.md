@@ -270,7 +270,7 @@ flutter:
 - [x] 21.1 MVVM (08:06)
 - [x] 21.2 VideoPlaybackConfigRepository (09:29)
 - [x] 21.3 PlaybackConfigViewModel (10:15)
-- [ ] 21.4 Views (04:58)
+- [x] 21.4 Views (04:58)
 - [ ] 21.5 Code Challenge (04:54)
 
 ### 22 RIVERPOD
