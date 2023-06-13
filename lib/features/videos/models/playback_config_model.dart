@@ -1,9 +1,9 @@
 class PlaybackConfigModel {
-  bool mutted;
+  bool muted;
   bool autoplay;
 
   PlaybackConfigModel({
-    required this.mutted,
+    required this.muted,
     required this.autoplay,
   });
 }

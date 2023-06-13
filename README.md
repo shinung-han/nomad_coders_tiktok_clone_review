@@ -20,6 +20,8 @@ dependencies:
   go_router: 6.0.2
   camera: ^0.10.5+2
   permission_handler: ^10.3.0
+  provider: 6.0.5
+  shared_preferences: ^2.1.2
 
 dev_dependencies:
 
@@ -267,7 +269,7 @@ flutter:
 - [x] 21.0 Introduction (01:59)
 - [x] 21.1 MVVM (08:06)
 - [x] 21.2 VideoPlaybackConfigRepository (09:29)
-- [ ] 21.3 PlaybackConfigViewModel (10:15)
+- [x] 21.3 PlaybackConfigViewModel (10:15)
 - [ ] 21.4 Views (04:58)
 - [ ] 21.5 Code Challenge (04:54)
 
