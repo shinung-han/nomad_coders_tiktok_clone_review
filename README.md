@@ -22,6 +22,7 @@ dependencies:
   permission_handler: ^10.3.0
   provider: 6.0.5
   shared_preferences: ^2.1.2
+  flutter_riverpod: ^2.1.3
 
 dev_dependencies:
 
@@ -275,7 +276,7 @@ flutter:
 
 ### 22 RIVERPOD
 
-- [ ] 22.0 Introduction (05:38)
+- [x] 22.0 Introduction (05:38)
 - [ ] 22.1 NotifierProvider (16:10)
 - [ ] 22.2 ConsumerWidget (08:25)
 - [ ] 22.3 Recap (02:54)
