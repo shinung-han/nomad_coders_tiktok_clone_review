@@ -69,6 +69,24 @@ class VideoConfig extends ChangeNotifier {
 final videoConfig = VideoConfig(); */
 
 // ValueNotifier
+/* import 'package:flutter/foundation.dart';
+
+final videoConfig = ValueNotifier(false); */
+
+// Provider
 import 'package:flutter/foundation.dart';
 
-final videoConfig = ValueNotifier(false);
+class VideoConfig extends ChangeNotifier {
+  bool isMuted = false;
+  bool isAutoplay = false;
+
+  void toggleIsMuted() {
+    isMuted = !isMuted;
+    notifyListeners();
+  }
+
+  void toggleAutoMute() {
+    isAutoplay = !isAutoplay;
+    notifyListeners();
+  }
+}

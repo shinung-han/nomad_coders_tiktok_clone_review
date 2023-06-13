@@ -260,13 +260,13 @@ flutter:
 - [x] 20.8 Recap (05:21)
 - [x] 20.9 ChangeNotifier (12:13)
 - [x] 20.10 ValueNotifier (05:25)
-- [ ] 20.11 Provider (11:37)
+- [x] 20.11 Provider (11:37)
 
 ### 21 MVVM WITH PROVIDER
 
-- [ ] 21.0 Introduction (01:59)
-- [ ] 21.1 MVVM (08:06)
-- [ ] 21.2 VideoPlaybackConfigRepository (09:29)
+- [x] 21.0 Introduction (01:59)
+- [x] 21.1 MVVM (08:06)
+- [x] 21.2 VideoPlaybackConfigRepository (09:29)
 - [ ] 21.3 PlaybackConfigViewModel (10:15)
 - [ ] 21.4 Views (04:58)
 - [ ] 21.5 Code Challenge (04:54)
