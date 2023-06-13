@@ -277,9 +277,9 @@ flutter:
 ### 22 RIVERPOD
 
 - [x] 22.0 Introduction (05:38)
-- [ ] 22.1 NotifierProvider (16:10)
-- [ ] 22.2 ConsumerWidget (08:25)
-- [ ] 22.3 Recap (02:54)
+- [x] 22.1 NotifierProvider (16:10)
+- [x] 22.2 ConsumerWidget (08:25)
+- [x] 22.3 Recap (02:54)
 - [ ] 22.4 AsyncNotifierProvider (18:48)
 - [ ] 22.5 Conclusions (03:08)
 

@@ -1,10 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:provider/provider.dart';
 import 'package:tiktok_clone_2/constants/gaps.dart';
 import 'package:tiktok_clone_2/constants/sizes.dart';
-import 'package:tiktok_clone_2/features/videos/view_models/playback_config_vm.dart';
 import 'package:tiktok_clone_2/features/videos/views/widgets/video_button.dart';
 import 'package:tiktok_clone_2/features/videos/views/widgets/video_comments.dart';
 import 'package:tiktok_clone_2/generated/l10n.dart';
@@ -72,10 +70,6 @@ class _VideoPostState extends State<VideoPost>
       value: 2.0,
       duration: _animationDuration,
     );
-
-    context
-        .read<PlaybackConfigViewModel>()
-        .addListener(_onPlaybackConfigChanged);
   }
 
   @override
@@ -86,8 +80,8 @@ class _VideoPostState extends State<VideoPost>
 
   void _onPlaybackConfigChanged() {
     if (!mounted) return;
-    final muted = context.read<PlaybackConfigViewModel>().muted;
-    if (muted) {
+
+    if (false) {
       _videoPlayerController.setVolume(0);
     } else {
       _videoPlayerController.setVolume(1);
@@ -99,8 +93,7 @@ class _VideoPostState extends State<VideoPost>
     if (info.visibleFraction == 1 &&
         !_isPaused &&
         !_videoPlayerController.value.isPlaying) {
-      final autoplay = context.read<PlaybackConfigViewModel>().autoplay;
-      if (autoplay) {
+      if (false) {
         _videoPlayerController.play();
       }
     }
@@ -232,17 +225,13 @@ class _VideoPostState extends State<VideoPost>
             left: Sizes.size20,
             top: Sizes.size60,
             child: IconButton(
-              icon: FaIcon(
-                context.watch<PlaybackConfigViewModel>().muted
+              icon: const FaIcon(
+                false
                     ? FontAwesomeIcons.volumeOff
                     : FontAwesomeIcons.volumeHigh,
                 color: Colors.white,
               ),
-              onPressed: () {
-                context
-                    .read<PlaybackConfigViewModel>()
-                    .setMuted(!context.read<PlaybackConfigViewModel>().muted);
-              },
+              onPressed: () {},
             ),
           ),
           Positioned(
