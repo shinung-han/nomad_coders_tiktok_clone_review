@@ -285,9 +285,9 @@ flutter:
 
 ### 23 FIREBASE SETUP
 
-- [ ] 23.0 Introduction (06:21)
-- [ ] 23.1 Installation (08:23)
-- [ ] 23.2 AuthenticationRepository (09:30)
+- [x] 23.0 Introduction (06:21)
+- [x] 23.1 Installation (08:23)
+- [x] 23.2 AuthenticationRepository (09:30)
 
 ### 24 FIREBASE AUTHENTICATION
 

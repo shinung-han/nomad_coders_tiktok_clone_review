@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -6,11 +7,16 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tiktok_clone_2/constants/sizes.dart';
 import 'package:tiktok_clone_2/features/videos/repos/playback_config_repo.dart';
 import 'package:tiktok_clone_2/features/videos/view_models/playback_config_vm.dart';
+import 'package:tiktok_clone_2/firebase_options.dart';
 import 'package:tiktok_clone_2/generated/l10n.dart';
 import 'package:tiktok_clone_2/router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   await SystemChrome.setPreferredOrientations(
     [
@@ -36,15 +42,15 @@ void main() async {
   );
 }
 
-class TikTokApp extends StatelessWidget {
+class TikTokApp extends ConsumerWidget {
   const TikTokApp({super.key});
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     // S.load(const Locale('en'));
     return MaterialApp.router(
-      routerConfig: router,
+      routerConfig: ref.watch(routerProvider),
       debugShowCheckedModeBanner: false,
       title: 'TikTok Clone Review',
       localizationsDelegates: const [
