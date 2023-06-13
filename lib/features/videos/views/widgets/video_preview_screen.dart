@@ -2,11 +2,13 @@ import 'dart:io';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gallery_saver/gallery_saver.dart';
+import 'package:tiktok_clone_2/features/videos/view_models/timeline_view_model.dart';
 import 'package:video_player/video_player.dart';
 
-class VideoPreviewScreen extends StatefulWidget {
+class VideoPreviewScreen extends ConsumerStatefulWidget {
   final XFile video;
   final bool isPicked;
 
@@ -17,10 +19,10 @@ class VideoPreviewScreen extends StatefulWidget {
   });
 
   @override
-  State<VideoPreviewScreen> createState() => _VideoPreviewScreenState();
+  ConsumerState<VideoPreviewScreen> createState() => _VideoPreviewScreenState();
 }
 
-class _VideoPreviewScreenState extends State<VideoPreviewScreen> {
+class _VideoPreviewScreenState extends ConsumerState<VideoPreviewScreen> {
   late final VideoPlayerController _videoPlayerController;
 
   bool _savedVideo = false;
@@ -31,7 +33,8 @@ class _VideoPreviewScreenState extends State<VideoPreviewScreen> {
 
     await _videoPlayerController.initialize();
     await _videoPlayerController.setLooping(true);
-    await _videoPlayerController.play();
+    // await _videoPlayerController.setVolume(0);
+    // await _videoPlayerController.play();
 
     setState(() {});
   }
@@ -60,6 +63,10 @@ class _VideoPreviewScreenState extends State<VideoPreviewScreen> {
     super.dispose();
   }
 
+  void _onUploadPressed() async {
+    ref.read(timelineProvider.notifier).uploadVideo();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,6 +85,14 @@ class _VideoPreviewScreenState extends State<VideoPreviewScreen> {
                     : FontAwesomeIcons.floppyDisk,
               ),
             ),
+          IconButton(
+            icon: ref.watch(timelineProvider).isLoading
+                ? const CircularProgressIndicator()
+                : const FaIcon(FontAwesomeIcons.cloudArrowUp),
+            onPressed: ref.watch(timelineProvider).isLoading
+                ? () {}
+                : _onUploadPressed,
+          ),
         ],
       ),
       body: _videoPlayerController.value.isInitialized

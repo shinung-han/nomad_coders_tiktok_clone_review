@@ -280,8 +280,8 @@ flutter:
 - [x] 22.1 NotifierProvider (16:10)
 - [x] 22.2 ConsumerWidget (08:25)
 - [x] 22.3 Recap (02:54)
-- [ ] 22.4 AsyncNotifierProvider (18:48)
-- [ ] 22.5 Conclusions (03:08)
+- [x] 22.4 AsyncNotifierProvider (18:48)
+- [x] 22.5 Conclusions (03:08)
 
 ### 23 FIREBASE SETUP
 
