@@ -291,7 +291,7 @@ flutter:
 
 ### 24 FIREBASE AUTHENTICATION
 
-- [ ] 24.0 createUserWithEmailAndPassword (13:48)
+- [x] 24.0 createUserWithEmailAndPassword (13:48)
 - [ ] 24.1 signOut (07:43)
 - [ ] 24.2 signInWithEmailAndPassword (16:34)
 - [ ] 24.3 Social Auth Config (06:55)
