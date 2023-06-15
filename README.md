@@ -293,8 +293,8 @@ flutter:
 
 - [x] 24.0 createUserWithEmailAndPassword (13:48)
 - [x] 24.1 signOut (07:43)
-- [ ] 24.2 signInWithEmailAndPassword (16:34)
-- [ ] 24.3 Social Auth Config (06:55)
+- [x] 24.2 signInWithEmailAndPassword (16:34)
+- [x] 24.3 Social Auth Config (06:55)
 - [ ] 24.4 Github Login (07:32)
 - [ ] 24.5 Conclusions (02:30)
 

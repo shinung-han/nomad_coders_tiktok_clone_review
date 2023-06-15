@@ -22,10 +22,29 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>REVERSED_CLIENT_ID</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.505600973269-red48ngdj3325rdni67s5b1limdn13h1</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>your usage description here</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>your usage description here</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>카메라 앨범에 저장해도 됨?</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -43,11 +62,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSCameraUsageDescription</key>
-	<string>your usage description here</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>your usage description here</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>카메라 앨범에 저장해도 됨?</string>
 </dict>
 </plist>
