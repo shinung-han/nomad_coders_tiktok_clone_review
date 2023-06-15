@@ -1,4 +1,4 @@
-import 'package:auth/auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class AuthenticationRepository {
@@ -25,6 +25,10 @@ class AuthenticationRepository {
       email: email,
       password: password,
     );
+  }
+
+  Future<void> githubSignIn() async {
+    await _firebaseAuth.signInWithProvider(GithubAuthProvider());
   }
 }
 

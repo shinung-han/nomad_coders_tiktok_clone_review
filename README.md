@@ -295,8 +295,8 @@ flutter:
 - [x] 24.1 signOut (07:43)
 - [x] 24.2 signInWithEmailAndPassword (16:34)
 - [x] 24.3 Social Auth Config (06:55)
-- [ ] 24.4 Github Login (07:32)
-- [ ] 24.5 Conclusions (02:30)
+- [x] 24.4 Github Login (07:32)
+- [x] 24.5 Conclusions (02:30)
 
 ### 25 USER PROFILE
 

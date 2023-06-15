@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tiktok_clone_2/constants/gaps.dart';
 import 'package:tiktok_clone_2/constants/sizes.dart';
 import 'package:tiktok_clone_2/features/authentication/login_screen.dart';
 import 'package:tiktok_clone_2/features/authentication/username_screen.dart';
+import 'package:tiktok_clone_2/features/authentication/view_models/social_auth_view_model.dart';
 import 'package:tiktok_clone_2/features/authentication/widgets/auth_button.dart';
 import 'package:tiktok_clone_2/generated/l10n.dart';
 import 'package:tiktok_clone_2/utils.dart';
 
-class SignUpScreen extends StatelessWidget {
+class SignUpScreen extends ConsumerWidget {
   static String routeURL = '/';
   static String routeName = 'signUp';
 
@@ -29,7 +31,7 @@ class SignUpScreen extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return OrientationBuilder(
       builder: (context, orientation) {
         return Scaffold(
@@ -65,9 +67,13 @@ class SignUpScreen extends StatelessWidget {
                       onTap: () => _onEmailTap(context),
                     ),
                     Gaps.v16,
-                    AuthButton(
-                      icon: const FaIcon(FontAwesomeIcons.apple),
-                      text: S.of(context).appleButton,
+                    GestureDetector(
+                      onTap: () => ref
+                          .read(socialAuthProvider.notifier)
+                          .githubSignIn(context),
+                      child: const AuthButton(
+                          icon: FaIcon(FontAwesomeIcons.github),
+                          text: 'Continue with Github'),
                     ),
                   ],
                   if (orientation == Orientation.landscape)
