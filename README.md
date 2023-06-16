@@ -300,9 +300,9 @@ flutter:
 
 ### 25 USER PROFILE
 
-- [ ] 25.0 Introduction (04:55)
-- [ ] 25.1 FireStore Intro (04:03)
-- [ ] 25.2 UserProfileModel (15:22)
+- [x] 25.0 Introduction (04:55)
+- [x] 25.1 FireStore Intro (04:03)
+- [x] 25.2 UserProfileModel (15:22)
 - [ ] 25.3 createProfile (09:30)
 - [ ] 25.4 findProfile (07:02)
 - [ ] 25.5 AvatarViewModel (16:44)
