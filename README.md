@@ -306,7 +306,7 @@ flutter:
 - [x] 25.3 createProfile (09:30)
 - [x] 25.4 findProfile (07:02)
 - [x] 25.5 AvatarViewModel (16:44)
-- [ ] 25.6 onAvatarUpload (19:29)
+- [x] 25.6 onAvatarUpload (19:29)
 - [ ] 25.7 Code Challenge (07:38)
 
 ### 26VIDEO UPLOAD
