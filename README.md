@@ -304,7 +304,7 @@ flutter:
 - [x] 25.1 FireStore Intro (04:03)
 - [x] 25.2 UserProfileModel (15:22)
 - [x] 25.3 createProfile (09:30)
-- [ ] 25.4 findProfile (07:02)
+- [x] 25.4 findProfile (07:02)
 - [ ] 25.5 AvatarViewModel (16:44)
 - [ ] 25.6 onAvatarUpload (19:29)
 - [ ] 25.7 Code Challenge (07:38)
