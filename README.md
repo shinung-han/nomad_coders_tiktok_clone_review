@@ -311,8 +311,8 @@ flutter:
 
 ### 26VIDEO UPLOAD
 
-- [ ] 26.0 Introduction (06:44)
-- [ ] 26.1 VideosRepository (12:24)
+- [x] 26.0 Introduction (06:44)
+- [x] 26.1 VideosRepository (12:24)
 - [ ] 26.2 uploadVideoProvider (11:46)
 - [ ] 26.3 Cloud Functions (11:25)
 - [ ] 26.4 ffmpeg (13:56)
