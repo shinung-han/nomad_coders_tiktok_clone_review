@@ -69,8 +69,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '505600973269',
     projectId: 'nomad-tiktok-b',
     storageBucket: 'nomad-tiktok-b.appspot.com',
-    iosClientId:
-        '505600973269-red48ngdj3325rdni67s5b1limdn13h1.apps.googleusercontent.com',
+    androidClientId: '505600973269-qb2uq0oq6iae34jqtfgs9190n5csf7pu.apps.googleusercontent.com',
+    iosClientId: '505600973269-red48ngdj3325rdni67s5b1limdn13h1.apps.googleusercontent.com',
     iosBundleId: 'com.example.tiktokClone2.RunnerTests',
   );
 }

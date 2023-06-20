@@ -314,7 +314,7 @@ flutter:
 - [x] 26.0 Introduction (06:44)
 - [x] 26.1 VideosRepository (12:24)
 - [x] 26.2 uploadVideoProvider (11:46)
-- [ ] 26.3 Cloud Functions (11:25)
+- [x] 26.3 Cloud Functions (11:25)
 - [ ] 26.4 ffmpeg (13:56)
 - [ ] 26.5 publicUrl (11:05)
 - [ ] 26.6 Conclusions (08:37)
