@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:auth/auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tiktok_clone_2/features/authentication/repos/authentication_repo.dart';
-import 'package:tiktok_clone_2/users/models/user_profile_model.dart';
-import 'package:tiktok_clone_2/users/repos/user_repo.dart';
+import 'package:tiktok_clone_2/features/users/models/user_profile_model.dart';
+import 'package:tiktok_clone_2/features/users/repos/user_repo.dart';
 
 class UsersViewModel extends AsyncNotifier<UserProfileModel> {
   late final UserRepository _usersRepository;
@@ -12,6 +12,10 @@ class UsersViewModel extends AsyncNotifier<UserProfileModel> {
 
   @override
   FutureOr<UserProfileModel> build() async {
+    await Future.delayed(
+      const Duration(seconds: 5),
+    );
+
     _usersRepository = ref.read(userRepo);
     _authenticationRepository = ref.read(authRepo);
 

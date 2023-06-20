@@ -9,7 +9,7 @@ import 'package:tiktok_clone_2/common/widgets/main_navigation/widgets/nav_tab.da
 import 'package:tiktok_clone_2/features/onboarding/widgets/post_video_button.dart';
 import 'package:tiktok_clone_2/features/videos/views/video_recording_screen.dart';
 import 'package:tiktok_clone_2/features/videos/views/video_timeline_screen.dart';
-import 'package:tiktok_clone_2/users/user_profile_screen.dart';
+import 'package:tiktok_clone_2/features/users/user_profile_screen.dart';
 import 'package:tiktok_clone_2/utils.dart';
 
 class MainNavigationScreen extends StatefulWidget {
