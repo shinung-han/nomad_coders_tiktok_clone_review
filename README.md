@@ -317,7 +317,7 @@ flutter:
 - [x] 26.3 Cloud Functions (11:25)
 - [x] 26.4 ffmpeg (13:56)
 - [x] 26.5 publicUrl (11:05)
-- [ ] 26.6 Conclusions (08:37)
+- [x] 26.6 Conclusions (08:37)
 
 ### 27 VIDEO TIMELINE
 
