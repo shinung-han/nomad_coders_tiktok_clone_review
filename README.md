@@ -323,7 +323,7 @@ flutter:
 
 - [x] 27.0 Introduction (01:40)
 - [x] 27.1 VideoPost (17:26)
-- [ ] 27.2 Infinite Firebase (15:53)
+- [x] 27.2 Infinite Firebase (15:53)
 - [ ] 27.3 FamilyAsyncNotifier (14:20)
 - [ ] 27.4 likeVideo (07:09)
 - [ ] 27.5 dislikeVideo (08:18)
