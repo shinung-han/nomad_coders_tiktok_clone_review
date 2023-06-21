@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone_2/constants/gaps.dart';
 import 'package:tiktok_clone_2/constants/sizes.dart';
+import 'package:tiktok_clone_2/features/videos/models/video_model.dart';
 import 'package:tiktok_clone_2/features/videos/view_models/playback_config_vm.dart';
 import 'package:tiktok_clone_2/features/videos/views/widgets/video_button.dart';
 import 'package:tiktok_clone_2/features/videos/views/widgets/video_comments.dart';
@@ -13,11 +14,13 @@ import 'package:visibility_detector/visibility_detector.dart';
 
 class VideoPost extends ConsumerStatefulWidget {
   final Function onVideoFinished;
+  final VideoModel videoData;
 
   final int index;
 
   const VideoPost({
     required this.onVideoFinished,
+    required this.videoData,
     required this.index,
     super.key,
   });
@@ -164,8 +167,9 @@ class _VideoPostState extends ConsumerState<VideoPost>
           Positioned.fill(
             child: _videoPlayerController.value.isInitialized
                 ? VideoPlayer(_videoPlayerController)
-                : Container(
-                    color: Colors.black,
+                : Image.network(
+                    widget.videoData.thumbnailUrl,
+                    fit: BoxFit.cover,
                   ),
           ),
           Positioned.fill(
@@ -197,15 +201,15 @@ class _VideoPostState extends ConsumerState<VideoPost>
               ),
             ),
           ),
-          const Positioned(
+          Positioned(
             bottom: 20,
             left: 10,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '@신웅',
-                  style: TextStyle(
+                  '@${widget.videoData.creator}',
+                  style: const TextStyle(
                     fontSize: Sizes.size20,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -213,8 +217,8 @@ class _VideoPostState extends ConsumerState<VideoPost>
                 ),
                 Gaps.v10,
                 Text(
-                  "I'm Flutter master 🚀✨",
-                  style: TextStyle(
+                  widget.videoData.description,
+                  style: const TextStyle(
                     fontSize: Sizes.size16,
                     color: Colors.white,
                   ),
@@ -241,25 +245,25 @@ class _VideoPostState extends ConsumerState<VideoPost>
             right: 10,
             child: Column(
               children: [
-                const CircleAvatar(
+                CircleAvatar(
                   radius: 25,
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
                   foregroundImage: NetworkImage(
-                      'https://avatars.githubusercontent.com/u/118904460?v=4'),
-                  child: Text('신웅'),
+                      'https://firebasestorage.googleapis.com/v0/b/nomad-tiktok-b.appspot.com/o/avatars%2F${widget.videoData.creatorUid}?alt=media'),
+                  child: Text('@${widget.videoData.creator}'),
                 ),
                 Gaps.v16,
                 VideoButton(
                   icon: FontAwesomeIcons.solidHeart,
-                  text: S.of(context).likeCount(129812),
+                  text: S.of(context).likeCount(widget.videoData.likes),
                 ),
                 Gaps.v16,
                 GestureDetector(
                   onTap: () => _onCommentTap(context),
                   child: VideoButton(
                     icon: FontAwesomeIcons.solidComment,
-                    text: S.of(context).commentCount(123123),
+                    text: S.of(context).commentCount(widget.videoData.comments),
                   ),
                 ),
                 Gaps.v16,

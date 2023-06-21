@@ -9,7 +9,6 @@ class VideosRepository {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
   final FirebaseStorage _storage = FirebaseStorage.instance;
 
-  // upload a video file
   UploadTask uploadVideoFile(File video, String uid) {
     final fileRef = _storage.ref().child(
         'videos/$uid/${DateTime.now().millisecondsSinceEpoch.toString()}');
@@ -20,7 +19,13 @@ class VideosRepository {
     await _db.collection("videos").add(data.toJson());
   }
 
-  // create a video document
+  Future<QuerySnapshot<Map<String, dynamic>>> fetchVideos() {
+    // return _db.collection('videos').where('likes', isGreaterThan: 10).get();
+    return _db
+        .collection('videos')
+        .orderBy('createdAt', descending: true)
+        .get();
+  }
 }
 
 final videosRepo = Provider((ref) => VideosRepository());
