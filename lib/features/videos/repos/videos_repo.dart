@@ -11,7 +11,8 @@ class VideosRepository {
 
   UploadTask uploadVideoFile(File video, String uid) {
     final fileRef = _storage.ref().child(
-        'videos/$uid/${DateTime.now().millisecondsSinceEpoch.toString()}');
+          "/videos/$uid/${DateTime.now().millisecondsSinceEpoch.toString()}",
+        );
     return fileRef.putFile(video);
   }
 
@@ -31,6 +32,13 @@ class VideosRepository {
     } else {
       return query.startAfter([lastItemCreatedAt]).get();
     }
+  }
+
+  Future<void> likeVideo(String videoId, String userId) async {
+    await _db.collection('likes').add({
+      "videoId": videoId,
+      "userId": userId,
+    });
   }
 }
 
