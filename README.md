@@ -326,7 +326,7 @@ flutter:
 - [x] 27.2 Infinite Firebase (15:53)
 - [x] 27.3 FamilyAsyncNotifier (14:20)
 - [x] 27.4 likeVideo (07:09)
-- [ ] 27.5 dislikeVideo (08:18)
+- [x] 27.5 dislikeVideo (08:18)
 - [ ] 27.6 Code Challenge (03:16)
 
 ### 28 DIRECT MESSAGES
